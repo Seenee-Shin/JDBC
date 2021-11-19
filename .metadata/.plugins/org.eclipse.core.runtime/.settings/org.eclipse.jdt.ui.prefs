@@ -1,0 +1,23 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.sql.SQLException"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="edu.kh.scott.model.vo.Emp"><rhs name\="edu.kh.scott.model.vo.Emp"/></lhs><lhs name\="java.lang.Exception"><rhs name\="java.sql.SQLException"/></lhs><lhs name\="java.lang.Throwable"><rhs name\="java.sql.SQLException"/></lhs><lhs name\="java.sql.SQLException"><rhs name\="java.sql.SQLException"/></lhs><lhs name\="edu.kh.board.model.vo.Board"><rhs name\="edu.kh.board.model.vo.Board"/></lhs><lhs name\="java.util.Hashtable"><rhs name\="java.util.Properties"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.Properties"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.Properties"/></lhs><lhs name\="java.util.Dictionary"><rhs name\="java.util.Properties"/></lhs><lhs name\="java.util.Properties"><rhs name\="java.util.Properties"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.FileInputStream"/><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.FileInputStream"/><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.io.InputStream"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.util.Iterator"><rhs name\="java.util.Scanner"/></lhs><lhs name\="edu.kh.jdbc.view.MemberView"><rhs name\="edu.kh.jdbc.view.MemberView"/></lhs><lhs name\="edu.kh.jdbc.member.model.service.MemberService"><rhs name\="edu.kh.jdbc.member.model.service.MemberService"/></lhs><lhs name\="edu.kh.jdbc.member.model.dao.MemberDAO"><rhs name\="edu.kh.jdbc.member.model.dao.MemberDAO"/></lhs><lhs name\="edu.kh.jdbc.member.model.vo.Member"><rhs name\="edu.kh.jdbc.member.model.vo.Member"/></lhs><lhs name\="edu.kh.jdbc.view.MainView"><rhs name\="edu.kh.jdbc.view.MainView"/></lhs><lhs name\="edu.kh.jdbc.view.BoardView"><rhs name\="edu.kh.jdbc.view.BoardView"/></lhs><lhs name\="edu.kh.jdbc.board.model.service.BoardService"><rhs name\="edu.kh.jdbc.board.model.service.BoardService"/></lhs><lhs name\="edu.kh.jdbc.board.model.dao.BoardDAO"><rhs name\="edu.kh.jdbc.board.model.dao.BoardDAO"/></lhs><lhs name\="edu.kh.jdbc.project.view.StudentView"><rhs name\="edu.kh.jdbc.project.view.StudentView"/></lhs><lhs name\="edu.kh.jdbc.project.student.model.serviece.StudentService"><rhs name\="edu.kh.jdbc.project.student.model.serviece.StudentService"/></lhs><lhs name\="edu.kh.jdbc.project.professor.model.service.ProfessorService"><rhs name\="edu.kh.jdbc.project.professor.model.service.ProfessorService"/></lhs><lhs name\="edu.kh.jdbc.project.student.model.dao.StudentDAO"><rhs name\="edu.kh.jdbc.project.student.model.dao.StudentDAO"/></lhs><lhs name\="edu.kh.jdbc.project.student.model.vo.Student"><rhs name\="edu.kh.jdbc.project.student.model.vo.Student"/></lhs><lhs name\="edu.kh.jdbc.project.view.MainView"><rhs name\="edu.kh.jdbc.project.view.MainView"/></lhs><lhs name\="edu.kh.jdbc.project.professor.model.dao.ProfessorDAO"><rhs name\="edu.kh.jdbc.project.professor.model.dao.ProfessorDAO"/></lhs><lhs name\="edu.kh.jdbc.project.professor.model.vo.Professor"><rhs name\="edu.kh.jdbc.project.professor.model.vo.Professor"/></lhs></history>
+content_assist_number_of_computers=20
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+markOccurrences=false
+org.eclipse.jdt.internal.ui.navigator.layout=1
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=21
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

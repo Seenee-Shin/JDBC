@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+
+	<!-- 학생 정보 등록 sql -->
+	<entry key='insertMember'>
+		INSERT INTO TB_STUDENT VALUES(SEQ_STUDENT_NO.NEXTVAL,
+		?,?,?,?,?,?)
+	</entry>
+
+	<!-- 학생 정보 상세 조회 SQL -->
+	<entry key="selectMember">
+		SELECT STUDENT_NO, STUDENT_GRADE, STUDENT_NAME,
+		SUBSTR(STUDENT_SSN,1,2) STUDENT_SSN, STUDENT_ADDRESS, DEPARTMENT_NAME
+		FROM TB_STUDENT
+		WHERE
+		SEQUENCE_NO = ?
+	</entry>
+
+	<!-- 학생 수정 sql -->
+	<entry key="updateMember">
+		UPDATE TB_STUDENT SET DEPARTMENT_NAME = ?,
+		STUDENT_NAME = ?, STUDENT_ADDRESS = ?
+		WHERE
+		STUDENT_NO = ?
+	</entry>
+
+	<!-- 학생 정보 일치 sql -->
+	<entry key="checkMember">
+		SELECT COUNT(*) FROM TB_STUDENT WHERE STUDENT_NO = ?
+	</entry>
+
+	<!-- 학생 정보 삭제 sql -->
+	<entry key="deleteMember">
+		DELETE FROM TB_STUDENT
+		WHERE STUDENT_NO = ?
+	</entry>
+
+	<!-- 학생 정보 전체 리스트 조회 SQL -->
+	<entry key="selectMemberList">
+		SELECT SEQUENCE_NO, STUDENT_NO,STUDENT_GRADE, NVL(STUDENT_NAME, '퇴학생')
+		STUDENT_NAME, SUBSTR(STUDENT_SSN,1,2) STUDENT_SSN, STUDENT_ADDRESS, DEPARTMENT_NAME
+		FROM
+		TB_STUDENT
+	</entry>
+
+</properties>
+

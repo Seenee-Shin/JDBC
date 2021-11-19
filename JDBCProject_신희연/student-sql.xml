@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<entry key= "studentInfo">
+ SELECT STUDENT_NO, STUDENT_NAME,DEPARTMENT_NAME, STUDENT_GRADE,RPAD( SUBSTR(STUDENT_SSN,1,8 ),LENGTH(STUDENT_SSN),'*') STUDENT_SSN ,STUDENT_ADDRESS 
+ FROM MN_STUDENT
+</entry>
+
+<entry key="dept" >
+WHERE DEPARTMENT_NAME = ?
+</entry>
+
+<entry key="grade" >
+WHERE STUDENT_GRADE = ?
+</entry>
+		
+<entry key="studentNo" >
+WHERE STUDENT_NO = ?
+</entry>
+
+<entry key="studentName" >
+WHERE STUDENT_NAME = ?
+</entry>
+
+<entry key="changeDept">
+ UPDATE MN_STUDENT SET 
+ DEPARTMENT_NAME = ?
+</entry>
+
+<entry key="changeAddress">
+ UPDATE MN_STUDENT SET 
+ STUDENT_ADDRESS = ?
+</entry>
+<entry key="checkStudent">
+ WHERE STUDENT_NO = ? AND STUDENT_NAME = ?
+</entry>
+
+<entry key="addStudent">
+INSERT INTO MN_STUDENT 
+VALUES (SEQ_STUDENT_NO.NEXTVAL,EXTRACT(YEAR FROM SYSDATE)||SEQ_STUDENT_NO.NEXTVAL,?,?,?,?,?)
+</entry>
+
+<entry key="deleteStudent">
+DELETE FROM MN_STUDENT
+</entry>
+</properties>

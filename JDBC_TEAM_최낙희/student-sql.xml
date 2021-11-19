@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties> <!-- <> == 태그 --> 
+	<!-- ctrl + ? : 주석 생성  -->
+	
+	<!-- 1. 전체 학생 조회 -->
+	<entry key="selectAll">
+	SELECT * FROM TB_STUDENT
+	</entry>
+	
+	<!-- 2. 학생 등록 추가 -->
+	<entry key="insertStudent">
+	INSERT INTO TB_STUDENT VALUES(SEQ_NO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?)
+							<!-- 구분, 학번, 학년, 이름, 주민등록번호, 학과명, 교수번호 -->
+	</entry>
+	
+	<!-- 3. 학생 정보 수정(학과명, 교수번호만) -->
+	<entry key="updateStudent">
+	UPDATE TB_STUDENT SET
+	DEPARTMENT_NAME = ?,
+	PROFESSOR_NO = ?
+	WHERE STUDENT_NO = ?
+	</entry>
+
+
+	<!-- 4. 학생 정보 삭제 -->
+	<entry key="deleteStudent">
+	DELETE FROM TB_STUDENT WHERE STUDENT_NO = ?
+	</entry>
+	
+	
+	<!-- 5. 학번으로 학생 정보 조회 -->
+	<entry key="selectOne">
+	SELECT * FROM TB_STUDENT WHERE STUDENT_NO =?
+	</entry>
+	
+	
+	<!-- 6. 학생 검색 -->
+	<entry key="list">
+	SELECT * FROM TB_STUDENT
+	</entry>
+	
+	<!-- 6-1. 학과명을 검색하여 해당하는 학생(들) 정보 조회 -->
+	<entry key="searchDeptName">
+	WHERE DEPARTMENT_NAME =?
+	</entry>
+	
+	
+	<!--  6-2. 주소지를 검색하여 해당하는 학생 정보 조회 -->
+	<entry key="searchAddress">
+	WHERE STUDENT_ADDRESS LIKE '%' || ? || '%'
+	</entry>
+	
+	
+	<!--  7. 학번,이름을 입력받아 일치하는 학생의 담당 교수명 조회 -->
+	<entry key="selectPFName">
+	SELECT SEQUENCE_NO, STUDENT_NO, STUDENT_NAME, PF_NAME
+	FROM TB_STUDENT
+	JOIN TB_PROFESSOR ON(PROFESSOR_NO = PF_NO)
+	WHERE STUDENT_NO = ?
+	AND STUDENT_NAME = ?
+	</entry>
+	
+
+</properties>

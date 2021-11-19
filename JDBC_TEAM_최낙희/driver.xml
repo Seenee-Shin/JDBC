@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties> <!-- <> == 태그 --> 
+<!--  --> <!-- 여기선 이게 주석임 -->
+
+	<!-- ctrl + ? : 주석 자동완성 -->
+	<!-- entry : Map에서 Key + Value 한번에 부르는 이름 -->
+	<entry key ="driver">oracle.jdbc.driver.OracleDriver</entry>
+			   <!--key--> <!--          Value         -->
+	<entry key ="url">jdbc:oracle:thin:@127.0.0.1:1521:xe</entry>		
+	<entry key ="userName">student</entry>   
+	<entry key ="password">student1234</entry>
+	
+	
+
+
+</properties>

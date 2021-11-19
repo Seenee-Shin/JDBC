@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 학과 정보 조회  -->
+	<entry key="departmentSearch">
+		SELECT DEPARTMENT_NO, DEPARTMENT_NAME, CATEGORY
+		FROM MN_DEPARTMENT
+		JOIN MN_STUDENT USING (DEPARTMENT_NAME)
+		GROUP BY DEPARTMENT_NO, DEPARTMENT_NAME, CATEGORY
+		ORDER BY DEPARTMENT_NO
+	</entry>
+	
+
+</properties>

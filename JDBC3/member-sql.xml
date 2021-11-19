@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<!-- ctrl + shift + / = 주석  -->
+<!-- sql 작성시 ; 지우기 / 위치홀더 사용가능  -->
+
+	<!-- login sql -->
+	<entry key="login">
+		SELECT MEMBER_NO, MEMBER_ID, MEMBER_NM, PHONE
+		FROM TB_MEMBER
+		WHERE MEMBER_ID = ?
+		AND MEMBER_PW = ?
+	</entry>
+	
+	<entry key = "idDupCheck">
+	SELECT * FROM TB_MEMBER
+	WHERE MEMBER_ID = ?
+	</entry>
+	
+	<entry key = "signUp">
+	INSERT INTO TB_MEMBER
+	VALUES(SEQ_MEMBER_NO.NEXTVAL, ?,?,?,?)
+	</entry>
+	
+	<entry key = "pwDupCheck">
+	SELECT * FROM TB_MEMBER
+	WHERE MEMBER_ID = ?
+	AND MEMBER_PW = ?
+	
+	</entry>
+	
+	<entry key = "updateInfo">
+	UPDATE TB_MEMBER SET 
+	MEMBER_PW = ?,
+	PHONE = ?
+	WHERE MEMBER_NO = ?
+	</entry>
+	
+	<entry key = "deleteMember">
+	DELETE FROM TB_MEMBER
+	WHERE MEMBER_NO = ?
+	AND MEMBER_PW = ?
+	</entry>
+		
+		
+</properties>

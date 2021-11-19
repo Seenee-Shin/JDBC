@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<entry key = "insertBoard">
+	INSERT INTO TB_BOARD 
+	VALUES(SEQ_BOARD_NO.NEXTVAL, ?, ?, DEFAULT, DEFAULT, ?)
+</entry>
+
+<entry key = "checkBoard">
+SELECT COUNT(*) FROM TB_BOARD
+WHERE BOARD_NO = ?
+AND BOARD_WRITER = ?
+</entry>
+
+<entry key = "updateBoard">
+	UPDATE TB_BOARD SET
+	BOARD_TITLE = ?,
+	BOARD_CONTENT = ?
+	WHERE BOARD_NO = ?
+</entry>
+
+<entry key = "deleteBoard">
+	DELETE FROM TB_BOARD
+	WHERE BOARD_NO =?
+</entry>
+
+
+<!--join 사용하기-->
+
+<entry key = "selectBoard">
+	SELECT BOARD_NO, BOARD_TITLE, BOARD_CONTENT, CREATE_DT, READ_COUNT, NVL(MEMBER_NM, '탈퇴회원') MEMBER_NM
+	FROM TB_BOARD
+	LEFT JOIN TB_MEMBER ON (BOARD_WRITER = MEMBER_NO)
+	WHERE BOARD_NO =?
+</entry>
+
+<entry key = "increaseReadCount">
+	UPDATE TB_BOARD SET
+	READ_COUNT = READ_COUNT+1
+	WHERE BOARD_NO = ?
+</entry>
+
+<entry key="selectBoardList">
+	SELECT BOARD_NO, BOARD_TITLE, CREATE_DT, READ_COUNT, NVL(MEMBER_NM, '탈퇴회원') MEMBER_NM
+	FROM TB_BOARD
+	LEFT JOIN TB_MEMBER ON (BOARD_WRITER = MEMBER_NO)
+	ORDER BY BOARD_NO DESC
+</entry>
+
+<entry key="searchList">
+	SELECT BOARD_NO, BOARD_TITLE, CREATE_DT, READ_COUNT, NVL(MEMBER_NM, '탈퇴회원') MEMBER_NM
+	FROM TB_BOARD
+	LEFT JOIN TB_MEMBER ON (BOARD_WRITER = MEMBER_NO)
+	
+	
+</entry>
+
+<entry key="title">
+	WHERE BOARD_TITLE LIKE '%' || ? || '%'
+	ORDER BY BOARD_NO DESC
+</entry>
+
+<entry key="content">
+	WHERE BOARD_CONTENT LIKE '%' || ? || '%'
+	ORDER BY BOARD_NO DESC
+</entry>
+
+<entry key="title_content">
+	WHERE BOARD_TITLE LIKE '%' || ? || '%'
+	OR BOARD_CONTENT,  LIKE '%' || ? || '%'
+	ORDER BY BOARD_NO DESC
+</entry>
+<entry key="writer">
+	WHERE MEMBER_NM	= ?
+	ORDER BY BOARD_NO DESC
+</entry>
+
+
+
+</properties>

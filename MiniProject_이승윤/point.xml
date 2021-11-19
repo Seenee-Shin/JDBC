@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!--ctrl + shift + / : 주석 생성-->
+
+	<!--학생 성적 기입 SQL-->
+	<entry key="insertPoint">
+		INSERT INTO MN_GRADE
+		VALUES(?,?,?)
+	</entry>
+	
+	<!--학생 성적 수정 SQL-->
+	<entry key="updatePoint">
+		UPDATE MN_GRADE SET POINT = ? WHERE TERM_NO = ? AND STUDENT_NO = ?
+	</entry>
+	
+	<!--학생 성적 전체 조회SQL-->
+	<entry key="selectAllPoint">
+		SELECT * FROM MN_GRADE
+	</entry>
+	
+	<!--학생 성적 상세 조회SQL-->
+	<entry key="selectOne">
+		SELECT * FROM MN_GRADE WHERE STUDENT_NO = ?
+	</entry>
+	
+	<!--학생 성적 삭제 SQL-->
+	<entry key="deletePoint">
+		DELETE FROM MN_GRADE WHERE STUDENT_NO = ? AND TERM_NO = ?
+	</entry>
+	
+</properties>

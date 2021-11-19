@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<entry key="deptOffice">
+SELECT DEPT_OFFICE FROM DEPARTMENT WHERE DEPT_NAME = ?
+</entry>
+		
+<entry key="dean">
+   SELECT P_NAME,P_PHONE,P_OFFICE
+   FROM MN_PROFESSOR 
+   JOIN DEPARTMENT ON (DEAN_NO = PROFESSOR_NO) 
+   WHERE DEPT_NAME = ?
+</entry>
+
+<entry key="checkProfessor">
+SELECT COUNT(*) FROM MN_PROFESSOR
+WHERE PROFESSOR_NO = ? AND P_NAME = ?
+</entry>
+
+<entry key="updateAddress">
+UPDATE MN_PROFESSOR SET
+P_OFFICE = ?
+</entry>
+
+<entry key="updatePhone">
+UPDATE MN_PROFESSOR SET
+P_PHONE = ?
+</entry>
+
+<entry key="where">
+WHERE PROFESSOR_NO = ? AND P_NAME = ?
+</entry>
+
+<entry key="deleteProfessor">
+DELETE FROM MN_PROFESSOR
+</entry>
+
+</properties>
